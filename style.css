@@ -164,3 +164,24 @@ footer p {
         padding: 40px 8%;
     }
 }
+/* Botão flutuante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 60px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+.whatsapp-float:hover {
+    background-color: #1da955;
+}
