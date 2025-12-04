@@ -1,0 +1,166 @@
+
+/* ============================
+   Marcelo Beltrame – Advogado
+   Site institucional simples, responsivo e clean
+   ============================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Georgia", "Times New Roman", serif;
+    background-color: #f8f7f5;
+    color: #222222;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+/* Cabeçalho */
+
+header {
+    background: #0b132b;
+    padding: 16px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 56px;
+}
+
+nav a {
+    color: #ffffff;
+    margin-left: 22px;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* Seção de destaque */
+
+.hero {
+    text-align: center;
+    padding: 100px 10% 70px 10%;
+    background-color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #0b132b;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-size: 19px;
+    color: #444444;
+    margin-top: 0;
+}
+
+/* Seções internas */
+
+.section {
+    padding: 60px 12%;
+    background-color: #f8f7f5;
+}
+
+.section h2 {
+    color: #0b132b;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+.section h3 {
+    color: #273469;
+    font-size: 22px;
+    margin-top: 26px;
+    margin-bottom: 4px;
+}
+
+.section p {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+/* Botões */
+
+.btn {
+    background-color: #d4af37;
+    color: #ffffff;
+    padding: 12px 26px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #b8922b;
+}
+
+/* Rodapé */
+
+footer {
+    background: #0b132b;
+    color: #ffffff;
+    text-align: center;
+    padding: 28px 8%;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+/* Contato */
+
+.contact-data p {
+    margin: 4px 0;
+}
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 4px 10px 4px 0;
+    }
+
+    .hero {
+        padding: 70px 8% 50px 8%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 40px 8%;
+    }
+}
