@@ -106,4 +106,121 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-colo
+    background-color: #b8922b;
+}
+
+/* Rodapé */
+
+footer {
+    background: #0b132b;
+    color: #ffffff;
+    text-align: center;
+    padding: 28px 8%;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+/* Contato */
+
+.contact-data p {
+    margin: 4px 0;
+}
+
+/* ============================
+   SOBRE – FOTO + TEXTO
+   ============================ */
+
+.sobre-container {
+    display: flex;
+    align-items: flex-start;      /* mantém texto e imagem alinhados pelo topo */
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: nowrap;            /* impede quebra que jogava a foto para cima */
+    margin-top: 30px;
+}
+
+.sobre-foto img {
+    width: 220px;                 /* reduzido para harmonizar com layout */
+    max-width: 100%;
+    border-radius: 8px;           /* suaviza o canto */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.13); /* sombra mais elegante */
+}
+
+.sobre-texto {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ============================
+   Botão flutuante de WhatsApp
+   ============================ */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 60px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+.whatsapp-float:hover {
+    background-color: #1da955;
+}
+
+/* ============================
+   Responsivo
+   ============================ */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 4px 10px 4px 0;
+    }
+
+    .hero {
+        padding: 70px 8% 50px 8%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 40px 8%;
+    }
+
+    /* Sobre – versão mobile */
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
