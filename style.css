@@ -140,7 +140,7 @@ footer p {
     justify-content: space-between;
     gap: 40px;
     flex-wrap: nowrap;            /* impede quebra que jogava a foto para cima */
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .sobre-foto img {
