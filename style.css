@@ -53,7 +53,7 @@ nav a:hover {
 
 .hero {
     text-align: center;
-    padding: 60px 10% 35px 10%;  /* antes 100px / 70px */
+    padding: 60px 10% 35px 10%;
     background-color: #ffffff;
 }
 
@@ -74,10 +74,10 @@ nav a:hover {
    ============================ */
 
 .section {
-    padding: 30px 14%;              /* antes 60px */
+    padding: 30px 14%;
     background-color: #f8f7f5;
-    max-width: 980px;               /* conteúdo não fica “perdido” na tela grande */
-    margin: 0 auto 20px auto;       /* centraliza e diminui espaço entre blocos */
+    max-width: 980px;
+    margin: 0 auto 20px auto;
 }
 
 .section h2 {
@@ -97,8 +97,6 @@ nav a:hover {
     margin-top: 4px;
     margin-bottom: 8px;
 }
-
-/* LISTAS */
 
 .section ul {
     padding-left: 18px;
@@ -139,7 +137,7 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 18px 8%;
-    margin-top: 10px;    /* antes 40px */
+    margin-top: 10px;
     font-size: 14px;
 }
 
@@ -156,29 +154,30 @@ footer p {
 }
 
 /* ============================
-   PÁGINA SOBRE – FOTO + TEXTO
+   PÁGINA SOBRE – FOTO + TEXTO (AJUSTADO)
    ============================ */
 
 .sobre-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;        /* Centraliza verticalmente com o texto */
     justify-content: space-between;
-    gap: 40px;
-    flex-wrap: nowrap;
-    margin-top: 10px;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 20px auto;
 }
 
 .sobre-foto img {
-    width: 220px;
+    width: 340px;               /* antes 220px — agora bem maior */
     max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.13);
+    border-radius: 10px;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.18); /* sombra mais elegante */
+    object-fit: cover;
 }
 
 .sobre-texto {
-    max-width: 600px;
+    max-width: 640px;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 /* ============================
@@ -212,7 +211,6 @@ footer p {
 
 @media (max-width: 768px) {
 
-    /* HEADER */
     header {
         padding: 12px 5%;
         flex-direction: column;
@@ -235,7 +233,6 @@ footer p {
         font-size: 16px;
     }
 
-    /* HERO */
     .hero {
         padding: 40px 8% 30px 8%;
     }
@@ -258,7 +255,6 @@ footer p {
         font-size: 16px;
     }
 
-    /* SEÇÕES */
     .section {
         padding: 20px 8%;
         margin-bottom: 16px;
@@ -274,7 +270,6 @@ footer p {
         font-size: 15px;
     }
 
-    /* SOBRE – MOBILE */
     .sobre-container {
         flex-direction: column;
         text-align: center;
@@ -282,10 +277,9 @@ footer p {
     }
 
     .sobre-foto img {
-        width: 180px;
+        width: 180px;            /* mantém tamanho adequado no mobile */
     }
 
-    /* WHATSAPP FLOAT */
     .whatsapp-float {
         font-size: 26px !important;
         width: 52px;
@@ -295,7 +289,6 @@ footer p {
         line-height: 52px;
     }
 
-    /* RODAPÉ */
     footer {
         font-size: 13px;
         padding: 14px 6%;
