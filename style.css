@@ -19,9 +19,7 @@ a {
     color: inherit;
 }
 
-/* ============================
-   CABEÇALHO
-   ============================ */
+/* Cabeçalho */
 
 header {
     background: #0b132b;
@@ -47,49 +45,43 @@ nav a:hover {
     color: #d4af37;
 }
 
-/* ============================
-   HERO SECTION
-   ============================ */
+/* Seção de destaque */
 
 .hero {
     text-align: center;
-    padding: 60px 10% 35px 10%;
+    padding: 100px 10% 70px 10%;
     background-color: #ffffff;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 40px;
     color: #0b132b;
     margin-bottom: 8px;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 19px;
     color: #444444;
     margin-top: 0;
 }
 
-/* ============================
-   CONTAINER CENTRAL PADRÃO
-   ============================ */
+/* Seções internas */
 
 .section {
-    padding: 30px 14%;
+    padding: 60px 14%;
     background-color: #f8f7f5;
-    max-width: 980px;
-    margin: 0 auto 20px auto;
 }
 
 .section h2 {
     color: #0b132b;
-    font-size: 26px;
-    margin-bottom: 12px;
+    font-size: 30px;
+    margin-bottom: 16px;
 }
 
 .section h3 {
     color: #273469;
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 22px;
+    margin-top: 26px;
     margin-bottom: 4px;
 }
 
@@ -98,28 +90,17 @@ nav a:hover {
     margin-bottom: 8px;
 }
 
-.section ul {
-    padding-left: 18px;
-}
-
-.section ul li {
-    margin-bottom: 8px;
-    font-size: 17px;
-}
-
-/* ============================
-   BOTÕES
-   ============================ */
+/* Botões */
 
 .btn {
     background-color: #d4af37;
     color: #ffffff;
-    padding: 10px 22px;
+    padding: 12px 26px;
     border-radius: 4px;
     display: inline-block;
-    margin-top: 18px;
+    margin-top: 24px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
 }
@@ -128,16 +109,14 @@ nav a:hover {
     background-color: #b8922b;
 }
 
-/* ============================
-   RODAPÉ
-   ============================ */
+/* Rodapé */
 
 footer {
     background: #0b132b;
     color: #ffffff;
     text-align: center;
-    padding: 18px 8%;
-    margin-top: 10px;
+    padding: 28px 8%;
+    margin-top: 40px;
     font-size: 14px;
 }
 
@@ -145,48 +124,40 @@ footer p {
     margin: 4px 0;
 }
 
-/* ============================
-   CONTATO
-   ============================ */
+/* Contato */
 
 .contact-data p {
     margin: 4px 0;
 }
 
-/* ============================================================
-   >>>>>>> AJUSTE DEFINITIVO DA PÁGINA SOBRE <<<<<<<<
-   ============================================================ */
-
-.section-sobre {
-    max-width: 1350px !important;   /* LIBERA ESPAÇO REAL PARA A FOTO */
-    padding-left: 40px;
-    padding-right: 40px;
-}
+/* ============================
+   SOBRE – FOTO + TEXTO
+   ============================ */
 
 .sobre-container {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start;      /* mantém texto e imagem alinhados pelo topo */
     justify-content: space-between;
-    gap: 60px;
-    width: 100%;
+    gap: 40px;
+    flex-wrap: nowrap;            /* impede quebra que jogava a foto para cima */
+    margin-top: 10px;
 }
 
 .sobre-foto img {
-    width: 320px;                 /* TAMANHO FINAL E VISÍVEL */
+    width: 220px;                 /* reduzido para harmonizar com layout */
     max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 6px 18px rgba(0,0,0,0.18);
-    object-fit: cover;
+    border-radius: 8px;           /* suaviza o canto */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.13); /* sombra mais elegante */
 }
 
 .sobre-texto {
-    max-width: 700px;
+    max-width: 600px;
     font-size: 18px;
-    line-height: 1.65;
+    line-height: 1.6;
 }
 
 /* ============================
-   BOTÃO WHATSAPP
+   Botão flutuante de WhatsApp
    ============================ */
 
 .whatsapp-float {
@@ -211,21 +182,14 @@ footer p {
 }
 
 /* ============================
-   RESPONSIVO – MOBILE
+   Responsivo
    ============================ */
 
 @media (max-width: 768px) {
 
     header {
-        padding: 12px 5%;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    header img {
-        height: 70px;
-        margin-bottom: 10px;
+        align-items: flex-start;
     }
 
     nav {
@@ -234,25 +198,69 @@ footer p {
 
     nav a {
         display: inline-block;
+        margin: 4px 10px 4px 0;
+    }
+
+    .hero {
+        padding: 70px 8% 50px 8%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 40px 8%;
+    }
+
+    /* Sobre – versão mobile */
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+/* ============================
+   AJUSTES RESPONSIVOS MOBILE
+   ============================ */
+
+@media (max-width: 768px) {
+
+    /* Ajusta o header */
+    header {
+        padding: 12px 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        height: 70px;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        display: inline-block;
         margin: 6px 12px;
         font-size: 16px;
     }
 
-    .hero {
-        padding: 40px 8% 30px 8%;
-    }
-
+    /* HERO SECTION */
     .hero img {
         height: 120px !important;
     }
 
     .hero h1 {
-        font-size: 24px;
-        line-height: 1.2;
+        font-size: 22px;
+        margin-top: 10px;
     }
 
     .hero p {
         font-size: 16px;
+        margin-bottom: 16px;
     }
 
     .btn {
@@ -260,48 +268,38 @@ footer p {
         font-size: 16px;
     }
 
+    /* SEÇÕES */
     .section {
-        padding: 20px 8%;
-        margin-bottom: 16px;
-        font-size: 16px;
-        line-height: 1.5;
+        padding: 0 8%;
+        margin-bottom: 32px;
+        font-size: 17px;
+        line-height: 1.55;
     }
 
     .section h2 {
         font-size: 20px;
+        margin-bottom: 12px;
     }
 
     .section ul li {
-        font-size: 15px;
+        margin-bottom: 8px;
+        font-size: 16px;
     }
 
-    /* SOBRE – MOBILE */
-    .section-sobre {
-        max-width: 100% !important;
-        padding: 0 20px;
-    }
-
-    .sobre-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .sobre-foto img {
-        width: 180px;
-    }
-
+    /* BOTÃO WHATSAPP FLUTUANTE */
     .whatsapp-float {
         font-size: 26px !important;
         width: 52px;
         height: 52px;
         bottom: 18px;
         right: 18px;
-        line-height: 52px;
     }
 
+    /* RODAPÉ */
     footer {
-        font-size: 13px;
-        padding: 14px 6%;
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.4;
+        padding: 16px 6%;
     }
 }
